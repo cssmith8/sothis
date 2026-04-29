@@ -22,11 +22,11 @@ public class Sothis : PlaceholderCharacterModel
 
     public override IEnumerable<CardModel> StartingDeck =>
     [
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<StrikeIronclad>(),
+        ModelDb.Card<Purification>(),
+        ModelDb.Card<Purification>(),
+        ModelDb.Card<Purification>(),
+        ModelDb.Card<GlassDaggers>(),
+        ModelDb.Card<GlassDaggers>(),
     ];
 
     public override IReadOnlyList<RelicModel> StartingRelics =>

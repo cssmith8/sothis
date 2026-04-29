@@ -10,28 +10,30 @@ using Sothis.SothisCode.Cards;
 
 namespace Sothis.SothisCode.Cards;
 
-public class GlassDaggers : SothisCard
+public class Purification : SothisCard
 {
-    public GlassDaggers() : base(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
+    public Purification() : base(1, CardType.Attack, CardRarity.Common, Sothis.SothisCode.CustomTargetType.Anyone)
     {
     }
     
     protected override IEnumerable<DynamicVar> CanonicalVars =>
         (IEnumerable<DynamicVar>)
         [
-            (DynamicVar) new DamageVar(1M, ValueProp.Move),
-            (DynamicVar) new RepeatVar(5)
+            (DynamicVar) new DamageVar(6M, ValueProp.Move),
+            (DynamicVar) new BlockVar(6M, ValueProp.Move)
         ];
     
     protected override async Task OnPlay(MegaCrit.Sts2.Core.GameActions.Multiplayer.PlayerChoiceContext choiceContext, CardPlay play)
     {
-        GlassDaggers card = this;
+        Purification card = this;
         ArgumentNullException.ThrowIfNull(play.Target, "cardPlay.Target");
-        AttackCommand attackCommand = await DamageCmd.Attack(card.DynamicVars.Damage.BaseValue).WithHitCount(card.DynamicVars.Repeat.IntValue).FromCard((CardModel) card).Targeting(play.Target).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
-    }
-
-    protected override void OnUpgrade()
-    {
-        DynamicVars.Repeat.UpgradeValueBy(3m);
+        if (play.Target == card.Owner.Creature)
+        {
+            await CreatureCmd.GainBlock(card.Owner.Creature, card.DynamicVars.Block, play);
+        }
+        else
+        {
+            await DamageCmd.Attack(card.DynamicVars.Damage.BaseValue).FromCard((CardModel) card).Targeting(play.Target).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
+        }
     }
 }
