@@ -20,7 +20,8 @@ public class Purification : SothisCard
         (IEnumerable<DynamicVar>)
         [
             (DynamicVar) new DamageVar(6M, ValueProp.Move),
-            (DynamicVar) new BlockVar(6M, ValueProp.Move)
+            (DynamicVar) new BlockVar(6M, ValueProp.Move),
+            (DynamicVar) new PurifyVar(6M)
         ];
     
     protected override async Task OnPlay(MegaCrit.Sts2.Core.GameActions.Multiplayer.PlayerChoiceContext choiceContext, CardPlay play)

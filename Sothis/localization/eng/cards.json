@@ -1,6 +1,6 @@
 {
   "SOTHIS-PURIFICATION.title": "Purification",
-  "SOTHIS-PURIFICATION.description": "Purify 6.",
+  "SOTHIS-PURIFICATION.description": "[gold]Purify[/gold] {Purify:diff()}.",
   "SOTHIS-GLASS_DAGGERS.title": "Glass Daggers",
   "SOTHIS-GLASS_DAGGERS.description": "Deal {Damage:diff()} damage {Repeat:diff()} times."
 }
