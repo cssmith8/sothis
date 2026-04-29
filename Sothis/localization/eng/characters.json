@@ -1,0 +1,16 @@
+{
+  "SOTHIS-SOTHIS.aromaPrinciple": "Lore",
+  "SOTHIS-SOTHIS.banter.alive.endTurnPing": "Co-op hurry up end turn ping message",
+  "SOTHIS-SOTHIS.banter.dead.endTurnPing": "...",
+  "SOTHIS-SOTHIS.cardsModifierDescription": "Sothis cards will now appear in rewards and shops.",
+  "SOTHIS-SOTHIS.cardsModifierTitle": "__ Cards",
+  "SOTHIS-SOTHIS.description": "Character Selection\nScreen Description",
+  "SOTHIS-SOTHIS.eventDeathPrevention": "Co-op survival line",
+  "SOTHIS-SOTHIS.goldMonologue": "Line spoken when obtaining a large amount of gold",
+  "SOTHIS-SOTHIS.possessiveAdjective": "his",
+  "SOTHIS-SOTHIS.pronounObject": "him",
+  "SOTHIS-SOTHIS.pronounPossessive": "his",
+  "SOTHIS-SOTHIS.pronounSubject": "he",
+  "SOTHIS-SOTHIS.title": "Sothis",
+  "SOTHIS-SOTHIS.titleObject": "Sothis"
+}
