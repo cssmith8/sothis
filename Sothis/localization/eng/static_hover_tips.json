@@ -2,5 +2,7 @@
   "SOTHIS-PURIFY.title": "Purify",
   "SOTHIS-PURIFY.description": "If used on an ally, gain block. If used on an enemy, deal damage.",
   "SOTHIS-CORRUPT.title": "Corrupt",
-  "SOTHIS-CORRUPT.description": "If used on an enemy, heal the enemy. If used on an ally, deal damage."
+  "SOTHIS-CORRUPT.description": "If used on an enemy, heal the enemy. If used on an ally, deal damage.",
+  "SOTHIS-RELIEF.title": "Relief",
+  "SOTHIS-RELIEF.description": "Allies with [gold]Relief[/gold] gain block at the end of their turn. Enemies with [gold]Relief[/gold] take damage at the end of their turn. Decrease Relief by 1 every turn."
 }

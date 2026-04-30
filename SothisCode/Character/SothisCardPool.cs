@@ -37,7 +37,8 @@ public class SothisCardPool : CustomCardPoolModel
         [
             (CardModel)ModelDb.Card<GlassDaggers>(),
             (CardModel)ModelDb.Card<Purification>(),
-            (CardModel)ModelDb.Card<Corruption>()
+            (CardModel)ModelDb.Card<Corruption>(),
+            (CardModel)ModelDb.Card<MinorRelief>()
         ];
     }
 

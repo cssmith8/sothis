@@ -1,4 +1,5 @@
 using BaseLib.Utils;
+using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Commands.Builders;
 using MegaCrit.Sts2.Core.Entities.Cards;
@@ -27,7 +28,7 @@ public class Corruption : SothisCard
         Corruption card = this;
         ArgumentNullException.ThrowIfNull(play.Target, "cardPlay.Target");
         await CreatureCmd.TriggerAnim(card.Owner.Creature, "Cast", card.Owner.Character.CastAnimDelay);
-        if (play.Target.IsMonster)
+        if (play.Target.Side == CombatSide.Enemy)
         {
             await CreatureCmd.Heal(play.Target, card.DynamicVars._vars["Corrupt"]._baseValue);
         }

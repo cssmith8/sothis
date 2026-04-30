@@ -12,29 +12,29 @@ using Sothis.SothisCode.Powers;
 
 namespace Sothis.SothisCode.Cards;
 
-public class Purification : SothisCard
+public class MinorRelief : SothisCard
 {
-    public Purification() : base(1, CardType.Skill, CardRarity.Basic, Sothis.SothisCode.CustomTargetType.Anyone)
+    public MinorRelief() : base(1, CardType.Skill, CardRarity.Basic, Sothis.SothisCode.CustomTargetType.Anyone)
     {
     }
     
     protected override IEnumerable<DynamicVar> CanonicalVars =>
         (IEnumerable<DynamicVar>)
         [
-            (DynamicVar) new PurifyVar(6M)
+            (DynamicVar) new ReliefVar(3M)
         ];
     
     protected override async Task OnPlay(MegaCrit.Sts2.Core.GameActions.Multiplayer.PlayerChoiceContext choiceContext, CardPlay play)
     {
-        Purification card = this;
+        MinorRelief card = this;
         ArgumentNullException.ThrowIfNull(play.Target, "cardPlay.Target");
         if (play.Target.Side == CombatSide.Enemy)
         {
-            await DamageCmd.Attack(card.DynamicVars._vars["Purify"].BaseValue).FromCard((CardModel) card).Targeting(play.Target).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
+            await PowerCmd.Apply<ReliefEnemy>(play.Target, card.DynamicVars._vars["Relief"].BaseValue, card.Owner.Creature, (CardModel) card);
         }
         else
         {
-            await CreatureCmd.GainBlock(card.Owner.Creature, card.DynamicVars._vars["Purify"].BaseValue, new ValueProp(), play);
+            await PowerCmd.Apply<ReliefAlly>(play.Target, card.DynamicVars._vars["Relief"].BaseValue, card.Owner.Creature, (CardModel) card);
         }
         
     }

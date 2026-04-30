@@ -29,8 +29,10 @@ public class Sothis : PlaceholderCharacterModel
         ModelDb.Card<Purification>(),
         ModelDb.Card<Purification>(),
         ModelDb.Card<Purification>(),
+        ModelDb.Card<Purification>(),
         ModelDb.Card<Corruption>(),
         ModelDb.Card<Corruption>(),
+        ModelDb.Card<MinorRelief>(),
         ModelDb.Card<GlassDaggers>(),
     ];
 
