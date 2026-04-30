@@ -5,6 +5,7 @@ using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
+using Sothis.SothisCode.Extensions;
 
 namespace Sothis.SothisCode.Powers;
 
@@ -12,6 +13,9 @@ public class AfflictionAlly : SothisPower
 {
     public override PowerType Type => PowerType.Debuff;
     public override PowerStackType StackType => PowerStackType.Counter;
+    
+    public override string CustomPackedIconPath => "affliction.png".PowerImagePath();
+    public override string CustomBigIconPath => "affliction.png".BigPowerImagePath();
     
     public override async Task BeforeTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
     {
