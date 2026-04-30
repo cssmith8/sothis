@@ -3,11 +3,11 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 
 namespace Sothis.SothisCode.Cards.Vars;
 
-public class CorruptVar : DynamicVar
+public class SoulHeatVar : DynamicVar
 {
-    public const string Key = "Corrupt";
+    public const string Key = "SoulHeat";
 
-    public CorruptVar(decimal baseValue) : base(Key, baseValue)
+    public SoulHeatVar(decimal baseValue) : base(Key, baseValue)
     {
         this.WithTooltip();
     }

@@ -1,7 +1,7 @@
 using BaseLib.Extensions;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 
-namespace Sothis.SothisCode.Cards;
+namespace Sothis.SothisCode.Cards.Vars;
 
 public class PurifyVar : DynamicVar
 {

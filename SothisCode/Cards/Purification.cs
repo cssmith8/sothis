@@ -7,7 +7,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
-using Sothis.SothisCode.Cards;
+using Sothis.SothisCode.Cards.Vars;
 using Sothis.SothisCode.Powers;
 
 namespace Sothis.SothisCode.Cards;
@@ -21,7 +21,7 @@ public class Purification : SothisCard
     protected override IEnumerable<DynamicVar> CanonicalVars =>
         (IEnumerable<DynamicVar>)
         [
-            (DynamicVar) new PurifyVar(5M)
+            (DynamicVar) new PurifyVar(6M)
         ];
     
     protected override async Task OnPlay(MegaCrit.Sts2.Core.GameActions.Multiplayer.PlayerChoiceContext choiceContext, CardPlay play)

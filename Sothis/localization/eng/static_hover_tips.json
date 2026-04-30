@@ -4,5 +4,7 @@
   "SOTHIS-CORRUPT.title": "Corrupt",
   "SOTHIS-CORRUPT.description": "If used on an enemy, heal the enemy. If used on an ally, deal damage.",
   "SOTHIS-RELIEF.title": "Relief",
-  "SOTHIS-RELIEF.description": "Allies with [gold]Relief[/gold] gain block at the end of their turn. Enemies with [gold]Relief[/gold] take damage at the end of their turn. Decrease [gold]Relief[/gold] by 1 every turn."
+  "SOTHIS-RELIEF.description": "Allies with [gold]Relief[/gold] gain block at the end of their turn. Enemies with [gold]Relief[/gold] take damage at the end of their turn. Decrease [gold]Relief[/gold] by 1 every turn.",
+  "SOTHIS-SOUL_HEAT.title": "Soul Heat",
+  "SOTHIS-SOUL_HEAT.description": "Whenever you deal [red]Damage[/red] or apply [gold]Relief[/gold], increase [gold]Soul Heat[/gold] by [blue]1[/blue] this turn. Max: [blue]10[/blue]"
 }

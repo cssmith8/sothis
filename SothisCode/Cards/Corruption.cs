@@ -7,7 +7,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
-using Sothis.SothisCode.Cards;
+using Sothis.SothisCode.Cards.Vars;
 
 namespace Sothis.SothisCode.Cards;
 

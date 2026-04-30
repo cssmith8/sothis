@@ -6,7 +6,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
-using Sothis.SothisCode.Cards;
+using Sothis.SothisCode.Cards.Vars;
 
 namespace Sothis.SothisCode.Cards;
 
@@ -19,8 +19,9 @@ public class Sandshaping : SothisCard
     protected override IEnumerable<DynamicVar> CanonicalVars =>
         (IEnumerable<DynamicVar>)
         [
-            (DynamicVar) new DamageVar(6M, ValueProp.Move),
-            (DynamicVar) new BlockVar(6M, ValueProp.Move)
+            (DynamicVar) new DamageVar(7M, ValueProp.Move),
+            (DynamicVar) new BlockVar(7M, ValueProp.Move),
+            (DynamicVar) new SoulHeatVar(0M)
         ];
     
     protected override async Task OnPlay(MegaCrit.Sts2.Core.GameActions.Multiplayer.PlayerChoiceContext choiceContext, CardPlay play)
