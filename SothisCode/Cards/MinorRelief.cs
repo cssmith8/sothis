@@ -36,6 +36,7 @@ public class MinorRelief : SothisCard
         {
             await PowerCmd.Apply<ReliefAlly>(play.Target, card.DynamicVars._vars["Relief"].BaseValue, card.Owner.Creature, (CardModel) card);
         }
-        
     }
+    
+    protected override void OnUpgrade() => this.DynamicVars._vars["Relief"].UpgradeValueBy(2M);
 }

@@ -36,6 +36,7 @@ public class Purification : SothisCard
         {
             await CreatureCmd.GainBlock(card.Owner.Creature, card.DynamicVars._vars["Purify"].BaseValue, new ValueProp(), play);
         }
-        
     }
+    
+    protected override void OnUpgrade() => this.DynamicVars._vars["Purify"].UpgradeValueBy(3M);
 }

@@ -20,7 +20,8 @@ public class Corruption : SothisCard
     protected override IEnumerable<DynamicVar> CanonicalVars =>
         (IEnumerable<DynamicVar>)
         [
-            (DynamicVar) new CorruptVar(6M)
+            (DynamicVar) new CorruptVar(4M),
+            (DynamicVar) new CardsVar(1)
         ];
     
     protected override async Task OnPlay(MegaCrit.Sts2.Core.GameActions.Multiplayer.PlayerChoiceContext choiceContext, CardPlay play)
@@ -36,6 +37,7 @@ public class Corruption : SothisCard
         {
             await DamageCmd.Attack(card.DynamicVars._vars["Corrupt"]._baseValue).FromCard((CardModel) card).Targeting(play.Target).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
         }
+        await CardPileCmd.Draw(choiceContext, card.DynamicVars.Cards.BaseValue, card.Owner);
     }
     
     public override bool HasTurnEndInHandEffect => true;
@@ -45,4 +47,6 @@ public class Corruption : SothisCard
         Corruption cardSource = this;
         await CreatureCmd.Damage(choiceContext, cardSource.Owner.Creature, cardSource.DynamicVars._vars["Corrupt"]._baseValue, new ValueProp(), (CardModel) cardSource);
     }
+    
+    protected override void OnUpgrade() => this.DynamicVars._vars["Corrupt"].UpgradeValueBy(-2M);
 }
