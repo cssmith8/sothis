@@ -1,5 +1,5 @@
 {
-  "SOTHIS-SOUL_HEAT.description": "Whenever you deal [red]Damage[/red] or apply [gold]Relief[/gold], increase Soul Heat by [blue]1[/blue] this turn. Max: [blue]10[/blue]",
+  "SOTHIS-SOUL_HEAT.description": "Whenever you deal [red]Damage[/red] or apply [gold]Relief[/gold], increase [gold]Soul Heat[/gold] by [blue]1[/blue] this turn. Max: [blue]10[/blue]",
   "SOTHIS-SOUL_HEAT.flavor": "Recreation of Soul Heat from Astrea",
   "SOTHIS-SOUL_HEAT.title": "Soul Heat"
 }

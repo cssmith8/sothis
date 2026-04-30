@@ -4,6 +4,7 @@ using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
+using Sothis.SothisCode.Powers;
 
 namespace Sothis.SothisCode.Relics;
 
@@ -78,13 +79,10 @@ public class SoulHeat : SothisRelic
         CardModel? cardSource)
     {
         SoulHeat soulHeat = this;
-        if (amount == -1) return Task.CompletedTask;
-        if (power.Id.Entry.Equals("sothis-relief_ally", StringComparison.InvariantCultureIgnoreCase) || power.Id.Entry.Equals("sothis-relief_enemy", StringComparison.InvariantCultureIgnoreCase))
+        if (power is not (ReliefAlly or ReliefEnemy) || amount == -1) return Task.CompletedTask;
+        if (Amount < 10)
         {
-            if (Amount < 10)
-            {
-                Amount++;
-            }
+            Amount++;
         }
         return Task.CompletedTask;
     }

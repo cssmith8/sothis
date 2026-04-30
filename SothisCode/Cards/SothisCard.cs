@@ -8,8 +8,10 @@ using Sothis.SothisCode.Extensions;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Cards;
 using MegaCrit.Sts2.Core.ValueProps;
+using Sothis.SothisCode.Relics;
 
 namespace Sothis.SothisCode.Cards;
 
@@ -17,6 +19,16 @@ namespace Sothis.SothisCode.Cards;
 public abstract class SothisCard(int cost, CardType type, CardRarity rarity, TargetType target) :
     CustomCardModel(cost, type, rarity, target)
 {
+    public int GetSoulHeat()
+    {
+        foreach (RelicModel relic in this.Owner.Relics)
+        {
+            if (relic is not SoulHeat soulHeat) continue;
+            return soulHeat.Amount;
+        }
+        return 0;
+    }
+    
     //Image size:
     //Normal art: 1000x760
     //Full art: 606x852

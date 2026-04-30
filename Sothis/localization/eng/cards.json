@@ -6,5 +6,7 @@
   "SOTHIS-GLASS_DAGGERS.title": "Glass Daggers",
   "SOTHIS-GLASS_DAGGERS.description": "Deal {Damage:diff()} damage {Repeat:diff()} times.",
   "SOTHIS-MINOR_RELIEF.description": "Apply {Relief:diff()} [gold]Relief[/gold] to any target.",
-  "SOTHIS-MINOR_RELIEF.title": "Minor Relief"
+  "SOTHIS-MINOR_RELIEF.title": "Minor Relief",
+  "SOTHIS-SANDSHAPING.description": "If [gold]Soul Heat[/gold] is even, deal {Damage:diff()} damage to a random enemy. If [gold]Soul Heat[/gold] is odd, gain {Block:diff()} [gold]Block[/gold].",
+  "SOTHIS-SANDSHAPING.title": "Sandshaping"
 }
