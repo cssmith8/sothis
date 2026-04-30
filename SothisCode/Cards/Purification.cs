@@ -12,15 +12,13 @@ namespace Sothis.SothisCode.Cards;
 
 public class Purification : SothisCard
 {
-    public Purification() : base(1, CardType.Attack, CardRarity.Common, Sothis.SothisCode.CustomTargetType.Anyone)
+    public Purification() : base(1, CardType.Skill, CardRarity.Basic, Sothis.SothisCode.CustomTargetType.Anyone)
     {
     }
     
     protected override IEnumerable<DynamicVar> CanonicalVars =>
         (IEnumerable<DynamicVar>)
         [
-            (DynamicVar) new DamageVar(6M, ValueProp.Move),
-            (DynamicVar) new BlockVar(6M, ValueProp.Move),
             (DynamicVar) new PurifyVar(6M)
         ];
     
@@ -28,13 +26,13 @@ public class Purification : SothisCard
     {
         Purification card = this;
         ArgumentNullException.ThrowIfNull(play.Target, "cardPlay.Target");
-        if (play.Target == card.Owner.Creature)
+        if (play.Target.IsMonster)
         {
-            await CreatureCmd.GainBlock(card.Owner.Creature, card.DynamicVars.Block, play);
+            await DamageCmd.Attack(card.DynamicVars._vars["Purify"].BaseValue).FromCard((CardModel) card).Targeting(play.Target).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
         }
         else
         {
-            await DamageCmd.Attack(card.DynamicVars.Damage.BaseValue).FromCard((CardModel) card).Targeting(play.Target).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
+            await CreatureCmd.GainBlock(card.Owner.Creature, card.DynamicVars._vars["Purify"].BaseValue, new ValueProp(), play);
         }
     }
 }

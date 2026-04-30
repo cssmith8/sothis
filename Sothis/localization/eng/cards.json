@@ -1,6 +1,8 @@
 {
   "SOTHIS-PURIFICATION.title": "Purification",
   "SOTHIS-PURIFICATION.description": "[gold]Purify[/gold] {Purify:diff()}.",
+  "SOTHIS-CORRUPTION.title": "Corruption",
+  "SOTHIS-CORRUPTION.description": "[gold]Corrupt[/gold] {Corrupt:diff()}. At the end of your turn, if this is in your [gold]Hand[/gold], take {Corrupt:diff()} damage.",
   "SOTHIS-GLASS_DAGGERS.title": "Glass Daggers",
   "SOTHIS-GLASS_DAGGERS.description": "Deal {Damage:diff()} damage {Repeat:diff()} times."
 }

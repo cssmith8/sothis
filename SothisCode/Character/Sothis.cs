@@ -7,11 +7,14 @@ using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Cards;
 using MegaCrit.Sts2.Core.Models.Relics;
 using Sothis.SothisCode.Cards;
+using Corruption = Sothis.SothisCode.Cards.Corruption;
 
 namespace Sothis.SothisCode.Character;
 
 public class Sothis : PlaceholderCharacterModel
 {
+    public override string PlaceholderID => "regent";
+    
     public const string CharacterId = "Sothis";
 
     public static readonly Color Color = new("ffffff");
@@ -25,7 +28,9 @@ public class Sothis : PlaceholderCharacterModel
         ModelDb.Card<Purification>(),
         ModelDb.Card<Purification>(),
         ModelDb.Card<Purification>(),
-        ModelDb.Card<GlassDaggers>(),
+        ModelDb.Card<Purification>(),
+        ModelDb.Card<Corruption>(),
+        ModelDb.Card<Corruption>(),
         ModelDb.Card<GlassDaggers>(),
     ];
 

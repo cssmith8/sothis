@@ -1,4 +1,6 @@
 {
   "SOTHIS-PURIFY.title": "Purify",
-  "SOTHIS-PURIFY.description": "If used on an ally, gain block. If used on an enemy, deal damage."
+  "SOTHIS-PURIFY.description": "If used on an ally, gain block. If used on an enemy, deal damage.",
+  "SOTHIS-CORRUPT.title": "Corrupt",
+  "SOTHIS-CORRUPT.description": "If used on an enemy, heal the enemy. If used on an ally, deal damage."
 }
