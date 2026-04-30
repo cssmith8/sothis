@@ -8,25 +8,17 @@ using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Sothis.SothisCode.Powers;
 
-public class Relief : SothisPower
+public class AfflictionEnemy : SothisPower
 {
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Counter;
-    
-    public override async Task BeforeTurnEndEarly(PlayerChoiceContext choiceContext, CombatSide side)
-    {
-        Relief relief = this;
-        if (side != relief.Owner.Side)
-            return;
-        relief.Flash();
-        await CreatureCmd.GainBlock(relief.Owner, (Decimal) relief.Amount, ValueProp.Unpowered, null);
-    }
 
     public override async Task AfterTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
     {
-        if (side != CombatSide.Enemy)
+        AfflictionEnemy affliction = this;
+        if (side != affliction.Owner.Side)
             return;
-        Relief relief = this;
-        await PowerCmd.Decrement((PowerModel) relief);
+        await CreatureCmd.GainBlock(affliction.Owner, affliction.Amount, ValueProp.Unpowered, null);
+        affliction.Flash();
     }
 }

@@ -18,8 +18,8 @@ public class ReliefAlly : SothisPower
         ReliefAlly relief = this;
         if (side != relief.Owner.Side)
             return;
-        relief.Flash();
         await CreatureCmd.GainBlock(relief.Owner, relief.Amount, ValueProp.Unpowered, null);
+        relief.Flash();
     }
 
     public override async Task AfterTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)

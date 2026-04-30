@@ -28,6 +28,7 @@ public class MinorRelief : SothisCard
     {
         MinorRelief card = this;
         ArgumentNullException.ThrowIfNull(play.Target, "cardPlay.Target");
+        await CreatureCmd.TriggerAnim(card.Owner.Creature, "Cast", card.Owner.Character.CastAnimDelay);
         if (play.Target.Side == CombatSide.Enemy)
         {
             await PowerCmd.Apply<ReliefEnemy>(play.Target, card.DynamicVars._vars["Relief"].BaseValue, card.Owner.Creature, (CardModel) card);
