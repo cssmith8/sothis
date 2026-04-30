@@ -7,6 +7,7 @@ using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Cards;
 using MegaCrit.Sts2.Core.Models.Relics;
 using Sothis.SothisCode.Cards;
+using Sothis.SothisCode.Relics;
 using Corruption = Sothis.SothisCode.Cards.Corruption;
 
 namespace Sothis.SothisCode.Character;
@@ -29,16 +30,16 @@ public class Sothis : PlaceholderCharacterModel
         ModelDb.Card<Purification>(),
         ModelDb.Card<Purification>(),
         ModelDb.Card<Purification>(),
-        ModelDb.Card<Purification>(),
         ModelDb.Card<Corruption>(),
         ModelDb.Card<Corruption>(),
+        ModelDb.Card<MinorRelief>(),
         ModelDb.Card<MinorRelief>(),
         ModelDb.Card<GlassDaggers>(),
     ];
 
     public override IReadOnlyList<RelicModel> StartingRelics =>
     [
-        ModelDb.Relic<BurningBlood>()
+        ModelDb.Relic<SoulHeat>()
     ];
 
     public override CardPoolModel CardPool => ModelDb.CardPool<SothisCardPool>();

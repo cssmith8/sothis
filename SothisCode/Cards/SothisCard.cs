@@ -25,7 +25,6 @@ public abstract class SothisCard(int cost, CardType type, CardRarity rarity, Tar
         get
         {
             var path = $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigCardImagePath();
-            MegaCrit.Sts2.Core.Logging.Log.Info($"Sothis searching for {Id.Entry.RemovePrefix().ToLowerInvariant()}.png");
             return ResourceLoader.Exists(path) ? path : "card.png".BigCardImagePath();
         }
     }
@@ -35,7 +34,6 @@ public abstract class SothisCard(int cost, CardType type, CardRarity rarity, Tar
         get
         {
             var path = $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
-            MegaCrit.Sts2.Core.Logging.Log.Info($"Sothis searching for {Id.Entry.RemovePrefix().ToLowerInvariant()}.png");
             return ResourceLoader.Exists(path) ? path : "card.png".CardImagePath();
         }
     }
@@ -45,7 +43,6 @@ public abstract class SothisCard(int cost, CardType type, CardRarity rarity, Tar
         get
         {
             var path = $"beta/{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
-            MegaCrit.Sts2.Core.Logging.Log.Info($"Sothis searching for {Id.Entry.RemovePrefix().ToLowerInvariant()}.png");
             return ResourceLoader.Exists(path) ? path : "card.png".CardImagePath();
         }
     }
