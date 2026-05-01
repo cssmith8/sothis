@@ -27,7 +27,7 @@ public class Sandshaping : SothisCard
     protected override async Task OnPlay(MegaCrit.Sts2.Core.GameActions.Multiplayer.PlayerChoiceContext choiceContext, CardPlay play)
     {
         Sandshaping card = this;
-        if (GetSoulHeat() % 2 == 0)
+        if (GetSoulHeat().Amount % 2 == 0)
         {
             ArgumentNullException.ThrowIfNull(card.CombatState);
             await DamageCmd.Attack(card.DynamicVars.Damage.BaseValue).FromCard((CardModel) card).TargetingRandomOpponents(card.CombatState).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);

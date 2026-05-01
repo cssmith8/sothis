@@ -8,5 +8,7 @@
   "SOTHIS-MINOR_RELIEF.description": "Apply {Relief:diff()} [gold]Relief[/gold] to any target.",
   "SOTHIS-MINOR_RELIEF.title": "Minor Relief",
   "SOTHIS-SANDSHAPING.description": "If [gold]Soul Heat[/gold] is even, deal {Damage:diff()} damage to a random enemy. If [gold]Soul Heat[/gold] is odd, gain {Block:diff()} [gold]Block[/gold].",
-  "SOTHIS-SANDSHAPING.title": "Sandshaping"
+  "SOTHIS-SANDSHAPING.title": "Sandshaping",
+  "SOTHIS-SUN_RAY.description": "10+ [gold]Soul Heat[/gold]: Deal {Damage:diff()} damage, reset your [gold]Soul Heat[/gold] to 0.\nElse: gain {SoulHeat:diff()} [gold]Soul Heat[/gold].",
+  "SOTHIS-SUN_RAY.title": "Sun Ray"
 }

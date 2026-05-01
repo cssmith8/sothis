@@ -19,14 +19,14 @@ namespace Sothis.SothisCode.Cards;
 public abstract class SothisCard(int cost, CardType type, CardRarity rarity, TargetType target) :
     CustomCardModel(cost, type, rarity, target)
 {
-    public int GetSoulHeat()
+    public SoulHeat GetSoulHeat()
     {
         foreach (RelicModel relic in this.Owner.Relics)
         {
             if (relic is not SoulHeat soulHeat) continue;
-            return soulHeat.Amount;
+            return soulHeat;
         }
-        return 0;
+        return new SoulHeat();
     }
     
     //Image size:
