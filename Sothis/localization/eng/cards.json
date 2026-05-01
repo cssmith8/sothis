@@ -11,7 +11,7 @@
   "SOTHIS-SANDSHAPING.title": "Sandshaping",
   "SOTHIS-SUN_RAY.description": "10+ [gold]Soul Heat[/gold]: Deal {Damage:diff()} damage, reset your [gold]Soul Heat[/gold] to 0.\nElse: gain {SoulHeat:diff()} [gold]Soul Heat[/gold].",
   "SOTHIS-SUN_RAY.title": "Sun Ray",
-  "SOTHIS-CONFLAGRATION.description": "Apply {Affliction:diff()} [gold]Affliction[/gold] to a random enemy. Deal {Factor:diff()} damage times the amount of [gold]Affliction[/gold] the enemy has to ALL enemies.",
+  "SOTHIS-CONFLAGRATION.description": "Apply {Affliction:diff()} [gold]Affliction[/gold] to a random enemy. Deal damage of {Factor:diff()} times the amount of [gold]Affliction[/gold] the enemy has to ALL enemies.",
   "SOTHIS-CONFLAGRATION.title": "Conflagration",
   "SOTHIS-PURGING_ERUPTION.description": "Apply {Affliction:diff()} [gold]Affliction[/gold] to an enemy. Deal {Damage:diff()} damage to the enemy for each [gold]Affliction[/gold] it has.",
   "SOTHIS-PURGING_ERUPTION.title": "Purging Eruption"
