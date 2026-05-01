@@ -16,5 +16,7 @@
   "SOTHIS-PURGING_ERUPTION.description": "Apply {Affliction:diff()} [gold]Affliction[/gold] to an enemy. Deal {Damage:diff()} damage to the enemy for each [gold]Affliction[/gold] it has.",
   "SOTHIS-PURGING_ERUPTION.title": "Purging Eruption",
   "SOTHIS-FLAMMABLE_CHAKRAM.description": "Gain {FlammableChakram:diff()} [gold]Flammable Chakram[/gold].",
-  "SOTHIS-FLAMMABLE_CHAKRAM.title": "Flammable Chakram"
+  "SOTHIS-FLAMMABLE_CHAKRAM.title": "Flammable Chakram",
+  "SOTHIS-GHASTLY_FIRE.description": "{SoulHeat:diff()}+ [gold]Soul Heat[/gold]: Apply {Relief:diff()} [gold]Relief[/gold] to any target and decrease [gold]Soul Heat[/gold] by {SoulHeatLoss:diff()}.\nElse: Apply {Affliction:diff()} [gold]Affliction[/gold] to any target and raise [gold]Soul Heat[/gold] by {SoulHeatGain:diff()}.",
+  "SOTHIS-GHASTLY_FIRE.title": "Ghastly Fire"
 }
