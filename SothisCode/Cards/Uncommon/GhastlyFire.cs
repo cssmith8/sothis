@@ -42,7 +42,7 @@ public class GhastlyFire : SothisCard
             {
                 await PowerCmd.Apply<ReliefAlly>(play.Target, card.DynamicVars._vars["Relief"].BaseValue, card.Owner.Creature, (CardModel) card);
             }
-            soulHeat.Amount -= card.DynamicVars._vars["SoulHeatLoss"].IntValue;
+            soulHeat.DecreaseSoulHeat(card.DynamicVars._vars["SoulHeatLoss"].IntValue);
         }
         else
         {
@@ -54,7 +54,7 @@ public class GhastlyFire : SothisCard
             {
                 await PowerCmd.Apply<AfflictionAlly>(play.Target, card.DynamicVars._vars["Affliction"].BaseValue, card.Owner.Creature, (CardModel) card);
             }
-            soulHeat.Amount += card.DynamicVars._vars["SoulHeatGain"].IntValue;
+            soulHeat.IncreaseSoulHeat(card.DynamicVars._vars["SoulHeatGain"].IntValue);
         }
     }
 

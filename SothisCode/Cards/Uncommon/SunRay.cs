@@ -33,7 +33,7 @@ public class SunRay : SothisCard
         }
         else
         {
-            soulHeat.Amount += DynamicVars._vars["SoulHeat"].IntValue;
+            soulHeat.IncreaseSoulHeat(DynamicVars._vars["SoulHeat"].IntValue);
         }
     }
 

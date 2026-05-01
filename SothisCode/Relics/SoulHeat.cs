@@ -1,8 +1,10 @@
+using BaseLib.Extensions;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Models.Cards;
 using MegaCrit.Sts2.Core.ValueProps;
 using Sothis.SothisCode.Powers;
 
@@ -28,6 +30,31 @@ public class SoulHeat : SothisRelic
     }
     
     public override int DisplayAmount => Amount;
+
+    public int IncreaseSoulHeat(int amountToIncrease)
+    {
+        int currentHeat = Amount;
+        currentHeat += amountToIncrease;
+        if (currentHeat <= 0) currentHeat = 0;
+        Amount = currentHeat;
+        return currentHeat;
+    }
+    
+    public int DecreaseSoulHeat(int amountToDecrease)
+    {
+        return IncreaseSoulHeat(0 - amountToDecrease);
+    }
+
+    private void ResetSoulHeat()
+    {
+        int amountToReset = 0;
+        foreach (PowerModel power in this.Owner.Creature.Powers)
+        {
+            if (power is not ConcentrationPower concentrationPower) continue;
+            amountToReset += concentrationPower.Amount;
+        }
+        Amount = amountToReset;
+    }
     
     private void UpdateDisplay()
     {
@@ -36,15 +63,14 @@ public class SoulHeat : SothisRelic
     
     public override Task BeforeCombatStart()
     {
-        Amount = 0;
-        // this.Status = RelicStatus.Normal;
+        this.ResetSoulHeat();
         return Task.CompletedTask;
     }
     
     public override Task AfterTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
     {
-        Amount = 0;
-        // this.Status = RelicStatus.Normal;
+        if (side == CombatSide.Player) return Task.CompletedTask;
+        this.ResetSoulHeat();
         return Task.CompletedTask;
     }
     

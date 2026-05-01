@@ -19,5 +19,8 @@
   "SOTHIS-AFFLICTION_ENEMY.title": "Affliction",
   "SOTHIS-FLAMMABLE_CHAKRAM_POWER.description": "Whenever you deal damage, apply Relief to the target. Decrease Flammable Chakram by 1 each turn.",
   "SOTHIS-FLAMMABLE_CHAKRAM_POWER.smartDescription": "Whenever you deal damage, apply [blue]{Amount}[/blue] [gold]Relief[/gold] to the target. Decrease [gold]Flammable Chakram[/gold] by 1 each turn.",
-  "SOTHIS-FLAMMABLE_CHAKRAM_POWER.title": "Flammable Chakram"
+  "SOTHIS-FLAMMABLE_CHAKRAM_POWER.title": "Flammable Chakram",
+  "SOTHIS-CONCENTRATION_POWER.description": "Increases the starting amount of [gold]Soul Heat[/gold] every turn.",
+  "SOTHIS-CONCENTRATION_POWER.smartDescription": "Every turn, begin with [blue]{Amount}[/blue] [gold]Soul Heat[/gold].",
+  "SOTHIS-CONCENTRATION_POWER.title": "Concentration"
 }
