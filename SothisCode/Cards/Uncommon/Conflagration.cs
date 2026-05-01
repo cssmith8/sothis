@@ -1,16 +1,10 @@
-using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
-using MegaCrit.Sts2.Core.Commands.Builders;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
-using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
-using MegaCrit.Sts2.Core.Models.Cards;
-using MegaCrit.Sts2.Core.ValueProps;
 using Sothis.SothisCode.Cards.Vars;
 using Sothis.SothisCode.Powers;
-using Sothis.SothisCode.Relics;
 
 namespace Sothis.SothisCode.Cards.Uncommon;
 
@@ -36,8 +30,8 @@ public class Conflagration : SothisCard
         Creature? target = card.Owner.RunState.Rng.CombatTargets.NextItem<Creature>((IEnumerable<Creature>) hittableEnemies);
         if (target == null) return;
         AfflictionEnemy? afflictionEnemy = await PowerCmd.Apply<AfflictionEnemy>(target, card.DynamicVars._vars["Affliction"].BaseValue, card.Owner.Creature, (CardModel) card);
-        if (afflictionEnemy == null) return;
-        await DamageCmd.Attack(card.DynamicVars._vars["Factor"].BaseValue * afflictionEnemy._amount).FromCard((CardModel) card).TargetingAllOpponents(card.CombatState).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
+        if (afflictionEnemy is not { Amount: > 0 }) return;
+        await DamageCmd.Attack(card.DynamicVars._vars["Factor"].BaseValue * afflictionEnemy.Amount).FromCard((CardModel) card).TargetingAllOpponents(card.CombatState).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
     }
 
     protected override void OnUpgrade()
