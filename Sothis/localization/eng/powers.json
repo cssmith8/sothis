@@ -16,5 +16,8 @@
   "SOTHIS-AFFLICTION_ALLY.title": "Affliction",
   "SOTHIS-AFFLICTION_ENEMY.description": "Allies with Affliction take damage at the end of their turn. Enemies with Affliction heal at the end of their turn.",
   "SOTHIS-AFFLICTION_ENEMY.smartDescription": "Heal [blue]{Amount}[/blue] HP at the end of its turn.",
-  "SOTHIS-AFFLICTION_ENEMY.title": "Affliction"
+  "SOTHIS-AFFLICTION_ENEMY.title": "Affliction",
+  "SOTHIS-FLAMMABLE_CHAKRAM_POWER.description": "Whenever you deal damage, apply Relief to the target. Decrease Flammable Chakram by 1 each turn.",
+  "SOTHIS-FLAMMABLE_CHAKRAM_POWER.smartDescription": "Whenever you deal damage, apply [blue]{Amount}[/blue] [gold]Relief[/gold] to the target. Decrease [gold]Flammable Chakram[/gold] by 1 each turn.",
+  "SOTHIS-FLAMMABLE_CHAKRAM_POWER.title": "Flammable Chakram"
 }

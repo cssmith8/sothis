@@ -14,5 +14,7 @@
   "SOTHIS-CONFLAGRATION.description": "Apply {Affliction:diff()} [gold]Affliction[/gold] to a random enemy. Deal damage of {Factor:diff()} times the amount of [gold]Affliction[/gold] the enemy has to ALL enemies.",
   "SOTHIS-CONFLAGRATION.title": "Conflagration",
   "SOTHIS-PURGING_ERUPTION.description": "Apply {Affliction:diff()} [gold]Affliction[/gold] to an enemy. Deal {Damage:diff()} damage to the enemy for each [gold]Affliction[/gold] it has.",
-  "SOTHIS-PURGING_ERUPTION.title": "Purging Eruption"
+  "SOTHIS-PURGING_ERUPTION.title": "Purging Eruption",
+  "SOTHIS-FLAMMABLE_CHAKRAM.description": "Gain {FlammableChakram:diff()} [gold]Flammable Chakram[/gold].",
+  "SOTHIS-FLAMMABLE_CHAKRAM.title": "Flammable Chakram"
 }
