@@ -10,5 +10,7 @@
   "SOTHIS-AFFLICTION.title": "Affliction",
   "SOTHIS-AFFLICTION.description": "Allies with [gold]Affliction[/gold] take damage at the end of their turn. Enemies with [gold]Affliction[/gold] heal at the end of their turn.",
   "SOTHIS-FLAMMABLE_CHAKRAM.title": "Flammable Chakram",
-  "SOTHIS-FLAMMABLE_CHAKRAM.description": "Whenever you deal damage, apply [gold]Relief[/gold] to the target. Decrease [gold]Flammable Chakram[/gold] by 1 every turn."
+  "SOTHIS-FLAMMABLE_CHAKRAM.description": "Whenever you deal damage, apply [gold]Relief[/gold] to the target. Decrease [gold]Flammable Chakram[/gold] by 1 every turn.",
+  "SOTHIS-CONCENTRATION.description": "Increases the starting amount of [gold]Soul Heat[/gold] every turn.",
+  "SOTHIS-CONCENTRATION.title": "Concentration"
 }
