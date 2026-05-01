@@ -4,6 +4,8 @@ using Godot;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Cards;
 using Sothis.SothisCode.Cards;
+using Sothis.SothisCode.Cards.Uncommon;
+using Conflagration = Sothis.SothisCode.Cards.Uncommon.Conflagration;
 using Corruption = Sothis.SothisCode.Cards.Corruption;
 
 namespace Sothis.SothisCode.Character;
@@ -38,7 +40,9 @@ public class SothisCardPool : CustomCardPoolModel
             (CardModel)ModelDb.Card<GlassDaggers>(),
             (CardModel)ModelDb.Card<Purification>(),
             (CardModel)ModelDb.Card<Corruption>(),
-            (CardModel)ModelDb.Card<MinorRelief>()
+            (CardModel)ModelDb.Card<MinorRelief>(),
+            (CardModel)ModelDb.Card<SunRay>(),
+            (CardModel)ModelDb.Card<Conflagration>(),
         ];
     }
 

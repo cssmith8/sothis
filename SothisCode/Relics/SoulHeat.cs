@@ -65,10 +65,7 @@ public class SoulHeat : SothisRelic
         {
             return Task.CompletedTask;
         }
-        if (Amount < 10)
-        {
-            Amount++;
-        }
+        Amount++;
         return Task.CompletedTask;
     }
     
@@ -79,11 +76,8 @@ public class SoulHeat : SothisRelic
         CardModel? cardSource)
     {
         SoulHeat soulHeat = this;
-        if (power is not (ReliefAlly or ReliefEnemy) || amount == -1) return Task.CompletedTask;
-        if (Amount < 10)
-        {
-            Amount++;
-        }
+        if (power is not (ReliefAlly or ReliefEnemy) || amount <= 0) return Task.CompletedTask;
+        Amount++;
         return Task.CompletedTask;
     }
 }

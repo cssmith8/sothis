@@ -10,5 +10,7 @@
   "SOTHIS-SANDSHAPING.description": "If [gold]Soul Heat[/gold] is even, deal {Damage:diff()} damage to a random enemy. If [gold]Soul Heat[/gold] is odd, gain {Block:diff()} [gold]Block[/gold].",
   "SOTHIS-SANDSHAPING.title": "Sandshaping",
   "SOTHIS-SUN_RAY.description": "10+ [gold]Soul Heat[/gold]: Deal {Damage:diff()} damage, reset your [gold]Soul Heat[/gold] to 0.\nElse: gain {SoulHeat:diff()} [gold]Soul Heat[/gold].",
-  "SOTHIS-SUN_RAY.title": "Sun Ray"
+  "SOTHIS-SUN_RAY.title": "Sun Ray",
+  "SOTHIS-CONFLAGRATION.description": "Apply {Affliction:diff()} [gold]Affliction[/gold] to a random enemy. Deal {Factor:diff()} damage times the amount of [gold]Affliction[/gold] the enemy has to ALL enemies.",
+  "SOTHIS-CONFLAGRATION.title": "Conflagration"
 }
