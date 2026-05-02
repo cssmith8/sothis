@@ -30,9 +30,10 @@ public class GhastlyFire : SothisCard
     {
         GhastlyFire card = this;
         SoulHeat soulHeat = GetSoulHeat();
+        int heat = await TryUseDistortion(soulHeat.Amount);
         ArgumentNullException.ThrowIfNull(play.Target, "cardPlay.Target");
         await CreatureCmd.TriggerAnim(card.Owner.Creature, "Cast", card.Owner.Character.CastAnimDelay);
-        if (soulHeat.Amount >= card.DynamicVars._vars["SoulHeat"].BaseValue)
+        if (heat >= card.DynamicVars._vars["SoulHeat"].BaseValue)
         {
             if (play.Target.Side == CombatSide.Enemy)
             {

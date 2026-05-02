@@ -30,7 +30,7 @@ public class SunRay : SothisCard
         {
             ArgumentNullException.ThrowIfNull(play.Target);
             await DamageCmd.Attack(card.DynamicVars.Damage.BaseValue).FromCard((CardModel) card).Targeting(play.Target).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
-            soulHeat.Amount = 0;
+            soulHeat.SetSoulHeat(0);
         }
         else
         {

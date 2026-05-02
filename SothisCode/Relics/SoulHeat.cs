@@ -21,7 +21,7 @@ public class SoulHeat : SothisRelic
     public int Amount
     {
         get => this._amount;
-        set
+        private set
         {
             this.AssertMutable();
             this._amount = value;
@@ -30,6 +30,12 @@ public class SoulHeat : SothisRelic
     }
     
     public override int DisplayAmount => Amount;
+
+    public int SetSoulHeat(int amountToSet)
+    {
+        Amount = (amountToSet > 0) ? amountToSet : 0;
+        return amountToSet;
+    }
 
     public int IncreaseSoulHeat(int amountToIncrease)
     {
