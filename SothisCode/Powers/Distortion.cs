@@ -1,5 +1,4 @@
 using MegaCrit.Sts2.Core.Entities.Powers;
-using Sothis.SothisCode.Extensions;
 
 namespace Sothis.SothisCode.Powers;
 

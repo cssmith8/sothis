@@ -25,5 +25,8 @@
   "SOTHIS-CONCENTRATION_POWER.title": "Concentration",
   "SOTHIS-DISTORTION.description": "The next action you take that uses [gold]Soul Heat[/gold] will act as if you have 10.",
   "SOTHIS-DISTORTION.smartDescription": "The next [blue]{Amount}[/blue] {Amount:plural:action|actions} you take that {Amount:plural:uses|use} [gold]Soul Heat[/gold] will act as if you have 10.",
-  "SOTHIS-DISTORTION.title": "Distortion"
+  "SOTHIS-DISTORTION.title": "Distortion",
+  "SOTHIS-HOURGLASS_MASTERY.description": "Generate a free, [gold]Exhaust[/gold], and [gold]Ethereal[/gold] copy of the next card you play, then decrease [gold]Hourglass Mastery[/gold] by 1.",
+  "SOTHIS-HOURGLASS_MASTERY.smartDescription": "Generate a free, [gold]Exhaust[/gold], and [gold]Ethereal[/gold] copy of the next card you play, then decrease [gold]Hourglass Mastery[/gold] by 1.",
+  "SOTHIS-HOURGLASS_MASTERY.title": "Hourglass Mastery"
 }
