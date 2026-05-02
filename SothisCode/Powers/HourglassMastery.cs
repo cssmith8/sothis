@@ -23,12 +23,16 @@ public class HourglassMastery : SothisPower
             this._active = value;
         }
     }
-    
-    // TODO: make this so if you get this power from a non-card source it activates properly
 
-    public override async Task AfterCardPlayed(PlayerChoiceContext context, CardPlay cardPlay)
+    public override async Task BeforeCardPlayed(CardPlay cardPlay)
     {
-        if (!this.Active) return;
+        Active = true;
+        
+    }
+
+    public override async Task AfterCardPlayedLate(PlayerChoiceContext choiceContext, CardPlay cardPlay)
+    {
+        if (!Active) return;
         this.Flash();
         CardModel clone = cardPlay.Card.CreateClone();
         CardCmd.ApplyKeyword(clone, CardKeyword.Exhaust);
@@ -36,11 +40,5 @@ public class HourglassMastery : SothisPower
         clone.EnergyCost.SetUntilPlayed(0);
         await CardPileCmd.AddGeneratedCardToCombat(clone, PileType.Hand, true);
         await PowerCmd.Decrement(this);
-    }
-
-    public override Task AfterCardPlayedLate(PlayerChoiceContext choiceContext, CardPlay cardPlay)
-    {
-        Active = true;
-        return base.AfterCardPlayedLate(choiceContext, cardPlay);
     }
 }
