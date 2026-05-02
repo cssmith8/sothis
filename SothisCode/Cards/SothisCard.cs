@@ -2,10 +2,12 @@
 using BaseLib.Extensions;
 using BaseLib.Utils;
 using Godot;
+using MegaCrit.Sts2.Core.Commands;
 using Sothis.SothisCode.Character;
 using Sothis.SothisCode.Extensions;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Models;
+using Sothis.SothisCode.Powers;
 using Sothis.SothisCode.Relics;
 
 namespace Sothis.SothisCode.Cards;
@@ -14,7 +16,7 @@ namespace Sothis.SothisCode.Cards;
 public abstract class SothisCard(int cost, CardType type, CardRarity rarity, TargetType target) :
     CustomCardModel(cost, type, rarity, target)
 {
-    public SoulHeat GetSoulHeat()
+    protected SoulHeat GetSoulHeat()
     {
         foreach (RelicModel relic in this.Owner.Relics)
         {
@@ -22,6 +24,17 @@ public abstract class SothisCard(int cost, CardType type, CardRarity rarity, Tar
             return soulHeat;
         }
         return new SoulHeat();
+    }
+
+    protected async Task<int> TryUseDistortion(int heat)
+    {
+        foreach (PowerModel power in this.Owner.Creature.Powers)
+        {
+            if (power is not Distortion distortion) continue;
+            await PowerCmd.Decrement((PowerModel) distortion);
+            return 10;
+        }
+        return heat;
     }
     
     //Image size:

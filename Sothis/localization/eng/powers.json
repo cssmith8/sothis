@@ -22,5 +22,8 @@
   "SOTHIS-FLAMMABLE_CHAKRAM_POWER.title": "Flammable Chakram",
   "SOTHIS-CONCENTRATION_POWER.description": "Increases the starting amount of [gold]Soul Heat[/gold] every turn.",
   "SOTHIS-CONCENTRATION_POWER.smartDescription": "Every turn, begin with [blue]{Amount}[/blue] [gold]Soul Heat[/gold].",
-  "SOTHIS-CONCENTRATION_POWER.title": "Concentration"
+  "SOTHIS-CONCENTRATION_POWER.title": "Concentration",
+  "SOTHIS-DISTORTION.description": "The next action you take that uses [gold]Soul Heat[/gold] will act as if you have 10.",
+  "SOTHIS-DISTORTION.smartDescription": "The next [blue]{Amount}[/blue] {Amount:plural:action|actions} you take that {Amount:plural:uses|use} [gold]Soul Heat[/gold] will act as if you have 10.",
+  "SOTHIS-DISTORTION.title": "Distortion"
 }

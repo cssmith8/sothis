@@ -46,6 +46,7 @@ public class SothisCardPool : CustomCardPoolModel
             (CardModel)ModelDb.Card<Sandshaping>(),
             
             (CardModel)ModelDb.Card<Concentration>(),
+            (CardModel)ModelDb.Card<DistortionHieroglyph>(),
             
             (CardModel)ModelDb.Card<Conflagration>(),
             (CardModel)ModelDb.Card<GhastlyFire>(),
@@ -57,7 +58,7 @@ public class SothisCardPool : CustomCardPoolModel
     }
 
     //Color of small card icons
-    public override Color DeckEntryCardColor => new("ffffff");
+    public override Color DeckEntryCardColor => new("1d2d86");
 
     public override bool IsColorless => false;
 }

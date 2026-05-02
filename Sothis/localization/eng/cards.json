@@ -20,5 +20,7 @@
   "SOTHIS-GHASTLY_FIRE.description": "{SoulHeat:diff()}+ [gold]Soul Heat[/gold]: Apply {Relief:diff()} [gold]Relief[/gold] to any target and decrease [gold]Soul Heat[/gold] by {SoulHeatLoss:diff()}.\nElse: Apply {Affliction:diff()} [gold]Affliction[/gold] to any target and raise [gold]Soul Heat[/gold] by {SoulHeatGain:diff()}.",
   "SOTHIS-GHASTLY_FIRE.title": "Ghastly Fire",
   "SOTHIS-CONCENTRATION.description": "Gain {Concentration:diff()} [gold]Concentration[/gold].",
-  "SOTHIS-CONCENTRATION.title": "Concentration"
+  "SOTHIS-CONCENTRATION.title": "Concentration",
+  "SOTHIS-DISTORTION_HIEROGLYPH.description": "Gain {Distortion:diff()} [gold]Distortion[/gold].",
+  "SOTHIS-DISTORTION_HIEROGLYPH.title": "Distortion Hieroglyph"
 }

@@ -12,5 +12,7 @@
   "SOTHIS-FLAMMABLE_CHAKRAM.title": "Flammable Chakram",
   "SOTHIS-FLAMMABLE_CHAKRAM.description": "Whenever you deal damage, apply [gold]Relief[/gold] to the target. Decrease [gold]Flammable Chakram[/gold] by 1 every turn.",
   "SOTHIS-CONCENTRATION.description": "Increases the starting amount of [gold]Soul Heat[/gold] every turn.",
-  "SOTHIS-CONCENTRATION.title": "Concentration"
+  "SOTHIS-CONCENTRATION.title": "Concentration",
+  "SOTHIS-DISTORTION.description": "The next action you take that uses [gold]Soul Heat[/gold] will act as if you have 10.",
+  "SOTHIS-DISTORTION.title": "Distortion"
 }

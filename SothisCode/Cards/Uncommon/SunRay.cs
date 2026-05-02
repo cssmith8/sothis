@@ -25,7 +25,8 @@ public class SunRay : SothisCard
     {
         SunRay card = this;
         SoulHeat soulHeat = GetSoulHeat();
-        if (soulHeat.Amount >= 10)
+        int heat = await TryUseDistortion(soulHeat.Amount);
+        if (heat >= 10)
         {
             ArgumentNullException.ThrowIfNull(play.Target);
             await DamageCmd.Attack(card.DynamicVars.Damage.BaseValue).FromCard((CardModel) card).Targeting(play.Target).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
@@ -34,6 +35,7 @@ public class SunRay : SothisCard
         else
         {
             soulHeat.IncreaseSoulHeat(DynamicVars._vars["SoulHeat"].IntValue);
+            await CreatureCmd.TriggerAnim(card.Owner.Creature, "Cast", card.Owner.Character.CastAnimDelay);
         }
     }
 
