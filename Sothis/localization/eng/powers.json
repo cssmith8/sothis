@@ -28,5 +28,8 @@
   "SOTHIS-DISTORTION.title": "Distortion",
   "SOTHIS-HOURGLASS_MASTERY.description": "Generate a free, [gold]Exhaust[/gold], and [gold]Ethereal[/gold] copy of the next card you play, then decrease [gold]Hourglass Mastery[/gold] by 1.",
   "SOTHIS-HOURGLASS_MASTERY.smartDescription": "Generate a free, [gold]Exhaust[/gold], and [gold]Ethereal[/gold] copy of the next card you play, then decrease [gold]Hourglass Mastery[/gold] by 1.",
-  "SOTHIS-HOURGLASS_MASTERY.title": "Hourglass Mastery"
+  "SOTHIS-HOURGLASS_MASTERY.title": "Hourglass Mastery",
+  "SOTHIS-SANDS_OF_TIME.description": "Percentage chance to generate a free, [gold]Exhaust[/gold], and [gold]Ethereal[/gold] copy of the next card you play, then decrease [gold]Sands Of Time[/gold] by 5.",
+  "SOTHIS-SANDS_OF_TIME.smartDescription": "[blue]{Amount}[/blue]% chance to generate a free, [gold]Exhaust[/gold], and [gold]Ethereal[/gold] copy of the next card you play, then decrease [gold]Sands Of Time[/gold] by 5.",
+  "SOTHIS-SANDS_OF_TIME.title": "Sands Of Time"
 }
