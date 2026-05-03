@@ -3,6 +3,7 @@ using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
+using Sothis.SothisCode.Extensions;
 
 namespace Sothis.SothisCode.Powers;
 
@@ -11,8 +12,8 @@ public class BehenianHourglassPower : SothisPower
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Counter;
     
-    // public override string CustomPackedIconPath => "behenian_hourglass.png".PowerImagePath();
-    // public override string CustomBigIconPath => "behenian_hourglass.png".BigPowerImagePath();
+    public override string CustomPackedIconPath => "behenian_hourglass.png".PowerImagePath();
+    public override string CustomBigIconPath => "behenian_hourglass.png".BigPowerImagePath();
 
     public override async Task AfterPlayerTurnStartEarly(PlayerChoiceContext choiceContext, Player player)
     {
