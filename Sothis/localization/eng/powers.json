@@ -31,5 +31,8 @@
   "SOTHIS-HOURGLASS_MASTERY.title": "Hourglass Mastery",
   "SOTHIS-SANDS_OF_TIME.description": "Percentage chance to generate a free, [gold]Exhaust[/gold], and [gold]Ethereal[/gold] copy of the next card you play, then decrease [gold]Sands Of Time[/gold] by 5.",
   "SOTHIS-SANDS_OF_TIME.smartDescription": "[blue]{Amount}[/blue]% chance to generate a free, [gold]Exhaust[/gold], and [gold]Ethereal[/gold] copy of the next card you play, then decrease [gold]Sands Of Time[/gold] by 5.",
-  "SOTHIS-SANDS_OF_TIME.title": "Sands Of Time"
+  "SOTHIS-SANDS_OF_TIME.title": "Sands Of Time",
+  "SOTHIS-BEHENIAN_HOURGLASS_POWER.description": "Gain [gold]Hourglass Mastery[/gold] at the start of every turn.",
+  "SOTHIS-BEHENIAN_HOURGLASS_POWER.smartDescription": "Gain {Amount} [gold]Hourglass Mastery[/gold] at the start of every turn.",
+  "SOTHIS-BEHENIAN_HOURGLASS_POWER.title": "Behenian Hourglass"
 }
