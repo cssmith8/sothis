@@ -17,7 +17,7 @@ public class Concentration : SothisCard
     protected override IEnumerable<DynamicVar> CanonicalVars =>
         (IEnumerable<DynamicVar>)
         [
-            (DynamicVar) new ConcentrationVar(2M),
+            (DynamicVar) new DynamicVar("Concentration", 2M),
             (DynamicVar) new SoulHeatVar(0M)
         ];
     

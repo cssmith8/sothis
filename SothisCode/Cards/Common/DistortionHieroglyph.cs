@@ -16,7 +16,7 @@ public class DistortionHieroglyph : SothisCard
     protected override IEnumerable<DynamicVar> CanonicalVars =>
         (IEnumerable<DynamicVar>)
         [
-            (DynamicVar) new DistortionVar(1M),
+            (DynamicVar) new DynamicVar("Distortion", 1M),
             (DynamicVar) new SoulHeatVar(0M)
         ];
     
