@@ -32,7 +32,6 @@ public class MinorRelief : SothisCard
         else
         {
             await PowerCmd.Apply<ReliefAlly>(play.Target, card.DynamicVars._vars["Relief"].BaseValue, card.Owner.Creature, (CardModel) card);
-            await PowerCmd.Apply<SandsOfTime>(play.Target, 50, card.Owner.Creature, (CardModel) card);
         }
     }
     
