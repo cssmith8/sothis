@@ -7,6 +7,7 @@ using Sothis.SothisCode.Character;
 using Sothis.SothisCode.Extensions;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Models;
+using Sothis.SothisCode.Cards.Uncommon;
 using Sothis.SothisCode.Powers;
 using Sothis.SothisCode.Relics;
 
@@ -36,6 +37,8 @@ public abstract class SothisCard(int cost, CardType type, CardRarity rarity, Tar
         }
         return heat;
     }
+    
+    public virtual bool isChantingCard => false;
     
     //Image size:
     //Normal art: 1000x760

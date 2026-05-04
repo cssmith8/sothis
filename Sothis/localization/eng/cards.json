@@ -23,6 +23,6 @@
   "SOTHIS-CONCENTRATION.title": "Concentration",
   "SOTHIS-DISTORTION_HIEROGLYPH.description": "The next action you take that uses [gold]Soul Heat[/gold] will act as if you have 10.",
   "SOTHIS-DISTORTION_HIEROGLYPH.title": "Distortion Hieroglyph",
-  "SOTHIS-BEHENIAN_HOURGLASS.description": "Gain [blue]{HourglassMastery:diff()}[/blue] [gold]Hourglass Mastery[/gold] at the start of every turn.",
+  "SOTHIS-BEHENIAN_HOURGLASS.description": "Gain {HourglassMastery:diff()} [gold]Hourglass Mastery[/gold] at the start of every turn.",
   "SOTHIS-BEHENIAN_HOURGLASS.title": "Behenian Hourglass"
 }

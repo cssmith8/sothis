@@ -34,5 +34,8 @@
   "SOTHIS-SANDS_OF_TIME.title": "Sands Of Time",
   "SOTHIS-BEHENIAN_HOURGLASS_POWER.description": "Gain [gold]Hourglass Mastery[/gold] at the start of every turn.",
   "SOTHIS-BEHENIAN_HOURGLASS_POWER.smartDescription": "Gain {Amount} [gold]Hourglass Mastery[/gold] at the start of every turn.",
-  "SOTHIS-BEHENIAN_HOURGLASS_POWER.title": "Behenian Hourglass"
+  "SOTHIS-BEHENIAN_HOURGLASS_POWER.title": "Behenian Hourglass",
+  "SOTHIS-CHANTING.description": "Increases the damage of [gold]Chanting[/gold] attacks. Lose all [gold]Chanting[/gold] if damage is dealt from a card without [gold]Chanting[/gold].",
+  "SOTHIS-CHANTING.smartDescription": "Increases the damage of [gold]Chanting[/gold] cards by [blue]{Amount}[/blue]. Lose all [gold]Chanting[/gold] if damage is dealt from a card without [gold]Chanting[/gold].",
+  "SOTHIS-CHANTING.title": "Chanting"
 }

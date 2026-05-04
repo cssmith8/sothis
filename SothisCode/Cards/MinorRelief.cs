@@ -13,7 +13,7 @@ public class MinorRelief : SothisCard
     public MinorRelief() : base(1, CardType.Skill, CardRarity.Basic, Sothis.SothisCode.CustomTargetType.Anyone)
     {
     }
-    
+
     protected override IEnumerable<DynamicVar> CanonicalVars =>
         (IEnumerable<DynamicVar>)
         [
