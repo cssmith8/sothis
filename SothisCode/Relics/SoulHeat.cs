@@ -1,5 +1,6 @@
 using BaseLib.Extensions;
 using MegaCrit.Sts2.Core.Combat;
+using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -73,11 +74,16 @@ public class SoulHeat : SothisRelic
         return Task.CompletedTask;
     }
     
-    public override Task AfterTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
+    public override async Task AfterTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
     {
-        if (side == CombatSide.Player) return Task.CompletedTask;
+        if (side == CombatSide.Player) return;
+        foreach (PowerModel power in this.Owner.Creature.Powers)
+        {
+            if (power is not InnerWarmthPower innerWarmthPower) continue;
+            await PowerCmd.Decrement((PowerModel) innerWarmthPower);
+            return;
+        }
         this.ResetSoulHeat();
-        return Task.CompletedTask;
     }
     
     public override Task AfterDamageGiven(
